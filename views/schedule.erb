@@ -7,11 +7,17 @@
   <h1>Event schedule</h1>
 
   <table>
-    <tr>
-      <td>8pm</td>
-      <td>Doors open</td>
-    </tr>
-    <!-- etc. etc. -->
+
+      <% @schedule.each do |schedule| %>
+      	<tr>
+      		<% schedule.each do |content| %>
+      		<td>
+      			<%=  content %>
+      		</td>
+      		<% end %>
+      	</tr>
+      	<% end %>
+ 
   </table>
 
 </body>
